@@ -1,0 +1,13 @@
+{
+  "name": "@config/tailwind-config",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./tailwind.config.ts"
+  },
+  "devDependencies": {
+    "@config/typescript-config": "workspace:*",
+    "tailwindcss": "^3.4.6",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}

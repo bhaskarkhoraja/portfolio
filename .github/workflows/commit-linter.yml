@@ -1,0 +1,21 @@
+name: Commit check
+
+on: [push, pull_request]
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./config/config-gh-actions/setup
+
+      - name: Validate new commits
+        if: github.event_name == 'push'
+        run: pnpm dlx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose --config ./commitlint.config.js
+
+      - name: Print commitlint config path
+        if: github.event_name == 'push'
+        run: pnpm dlx commitlint --print-config
