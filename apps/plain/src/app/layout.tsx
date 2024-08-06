@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import { Agbalumo } from "next/font/google"
 import { GeistSans } from "geist/font/sans"
+import { ThemeProvider } from "next-themes"
 
 import "@/styles/globals.css"
 
@@ -100,12 +101,19 @@ export default function RootLayout({
           agbalumo.variable
         )}
       >
-        <div className="flex">
-          <SiteNav />
-          {children}
-        </div>
-        <TailwindIndicator />
-        <Toaster />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          disableTransitionOnChange
+          enableSystem
+        >
+          <div className="flex">
+            <SiteNav />
+            {children}
+          </div>
+          <TailwindIndicator />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   )
