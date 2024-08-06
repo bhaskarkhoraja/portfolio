@@ -19,7 +19,7 @@ const Name = (): JSX.Element => {
       className="hover:text-bg bg-muted py-6 text-foreground shadow-none hover:bg-muted"
       onClick={handleClick}
     >
-      <span className="pb-1 font-serif text-lg">Bhaskar Khoraja</span>
+      <span className="pb-1 font-serif text-xl">Bhaskar Khoraja</span>
     </Button>
   )
 }
