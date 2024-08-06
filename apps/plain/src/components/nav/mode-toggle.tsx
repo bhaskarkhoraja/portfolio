@@ -17,14 +17,14 @@ const ModeToggle = (): JSX.Element => {
   const { setTheme, theme } = useTheme()
 
   return (
-    <div className="flex w-full rounded-md bg-muted p-1">
+    <div className="flex w-full rounded-md bg-tertiary p-1">
       <span className="sr-only">Toggle Dark Mode</span>
       {mounted ? (
         <div className="flex w-full cursor-pointer rounded-sm">
           <Button
             aria-label="Light"
             className={cn(
-              "flex h-fit flex-1 items-center justify-center gap-2 rounded-sm bg-transparent px-3 py-1 text-foreground shadow-none hover:bg-transparent hover:text-foreground",
+              "flex h-fit flex-1 items-center justify-center gap-2 rounded-sm bg-transparent px-3 py-1 text-tertiary-foreground shadow-none hover:bg-transparent hover:text-tertiary-foreground",
               theme === "light" &&
                 "text-primary-background hover:text-primary-background bg-background hover:bg-background"
             )}
@@ -37,7 +37,7 @@ const ModeToggle = (): JSX.Element => {
           <Button
             aria-label="dark"
             className={cn(
-              "flex h-fit flex-1 items-center justify-center gap-2 rounded-sm bg-transparent px-3 py-1 text-foreground shadow-none hover:bg-transparent hover:text-foreground",
+              "flex h-fit flex-1 items-center justify-center gap-2 rounded-sm bg-transparent px-3 py-1 text-tertiary-foreground shadow-none hover:bg-transparent hover:text-tertiary-foreground",
               theme === "dark" &&
                 "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground"
             )}
@@ -50,7 +50,7 @@ const ModeToggle = (): JSX.Element => {
           <Button
             aria-label="system"
             className={cn(
-              "flex h-fit flex-1 items-center justify-center gap-2 rounded-sm bg-transparent px-3 py-1 text-foreground shadow-none hover:bg-transparent hover:text-foreground",
+              "flex h-fit flex-1 items-center justify-center gap-2 rounded-sm bg-transparent px-3 py-1 text-tertiary-foreground shadow-none hover:bg-transparent hover:text-tertiary-foreground",
               theme === "system" &&
                 "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground"
             )}
