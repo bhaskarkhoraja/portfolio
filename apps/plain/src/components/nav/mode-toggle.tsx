@@ -4,6 +4,7 @@ import * as React from "react"
 import { Laptop2 as LaptopMinimal, Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 
+import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const ModeToggle = (): JSX.Element => {
@@ -20,63 +21,45 @@ const ModeToggle = (): JSX.Element => {
       <span className="sr-only">Toggle Dark Mode</span>
       {mounted ? (
         <div className="flex w-full cursor-pointer rounded-sm">
-          <div
+          <Button
             aria-label="Light"
             className={cn(
-              "flex flex-1 items-center justify-center gap-2 rounded-sm px-3 py-1",
-              theme === "light" && "text-primary-background bg-background"
+              "flex h-fit flex-1 items-center justify-center gap-2 rounded-sm bg-transparent px-3 py-1 text-foreground shadow-none hover:bg-transparent hover:text-foreground",
+              theme === "light" &&
+                "text-primary-background hover:text-primary-background bg-background hover:bg-background"
             )}
             onClick={() => {
               setTheme("light")
             }}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                setTheme("light")
-              }
-            }}
-            role="button"
-            tabIndex={0}
           >
             <Sun className="size-5" />
-          </div>
-          <div
+          </Button>
+          <Button
             aria-label="dark"
             className={cn(
-              "flex flex-1 items-center justify-center gap-2 rounded-sm px-3 py-1",
-              theme === "dark" && "bg-primary text-primary-foreground"
+              "flex h-fit flex-1 items-center justify-center gap-2 rounded-sm bg-transparent px-3 py-1 text-foreground shadow-none hover:bg-transparent hover:text-foreground",
+              theme === "dark" &&
+                "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground"
             )}
             onClick={() => {
               setTheme("dark")
             }}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                setTheme("dark")
-              }
-            }}
-            role="button"
-            tabIndex={0}
           >
             <Moon className="size-5" />
-          </div>
-          <div
+          </Button>
+          <Button
             aria-label="system"
             className={cn(
-              "flex flex-1 items-center justify-center gap-2 rounded-sm px-3 py-1",
-              theme === "system" && "bg-primary text-primary-foreground"
+              "flex h-fit flex-1 items-center justify-center gap-2 rounded-sm bg-transparent px-3 py-1 text-foreground shadow-none hover:bg-transparent hover:text-foreground",
+              theme === "system" &&
+                "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground"
             )}
             onClick={() => {
               setTheme("system")
             }}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                setTheme("system")
-              }
-            }}
-            role="button"
-            tabIndex={0}
           >
             <LaptopMinimal className="size-5" />
-          </div>
+          </Button>
         </div>
       ) : (
         <div className="flex w-full rounded-md bg-muted">
