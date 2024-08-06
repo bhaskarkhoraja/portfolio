@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...defaultTheme.fontFamily.sans],
+        serif: ["var(--font-agbalumo-serif)", ...defaultTheme.fontFamily.serif],
       },
     },
   },

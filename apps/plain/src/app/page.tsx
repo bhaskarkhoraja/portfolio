@@ -1,3 +1,3 @@
 export default function Home(): JSX.Element {
-  return <h1>Bhaskar Khoraja</h1>
+  return <h1 className="font-serif">Bhaskar Khoraja</h1>
 }

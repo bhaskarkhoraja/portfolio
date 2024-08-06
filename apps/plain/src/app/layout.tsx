@@ -1,10 +1,12 @@
 import type { Metadata, Viewport } from "next"
+import { Agbalumo } from "next/font/google"
 import { GeistSans } from "geist/font/sans"
 
 import "@/styles/globals.css"
 
 import { PLAIN_URL } from "@/config/constants"
 import { SITE_CONFIG } from "@/config/site"
+import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: {
@@ -67,6 +69,18 @@ export const viewport: Viewport = {
   ],
 }
 
+/*
+  Fonts:
+  * Agbalumo for highlights
+  * Geist Sans for body
+*/
+const agbalumo = Agbalumo({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-agbalumo-serif",
+})
+const geist = GeistSans
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -74,7 +88,17 @@ export default function RootLayout({
 }>): JSX.Element {
   return (
     <html lang="en">
-      <body className={GeistSans.className}>{children}</body>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          geist.className,
+          geist.variable,
+          agbalumo.className,
+          agbalumo.variable
+        )}
+      >
+        {children}
+      </body>
     </html>
   )
 }
