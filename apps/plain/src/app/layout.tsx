@@ -6,6 +6,7 @@ import "@/styles/globals.css"
 
 import { PLAIN_URL } from "@/config/constants"
 import { SITE_CONFIG } from "@/config/site"
+import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
@@ -98,6 +99,7 @@ export default function RootLayout({
         )}
       >
         {children}
+        <TailwindIndicator />
       </body>
     </html>
   )
