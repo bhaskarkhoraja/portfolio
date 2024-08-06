@@ -6,6 +6,7 @@ import "@/styles/globals.css"
 
 import { PLAIN_URL } from "@/config/constants"
 import { SITE_CONFIG } from "@/config/site"
+import SiteNav from "@/components/site-nav"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { Toaster } from "@/components/ui/sonner"
 import { cn } from "@/lib/utils"
@@ -99,7 +100,10 @@ export default function RootLayout({
           agbalumo.variable
         )}
       >
-        {children}
+        <div className="flex">
+          <SiteNav />
+          {children}
+        </div>
         <TailwindIndicator />
         <Toaster />
       </body>
