@@ -7,6 +7,7 @@ import "@/styles/globals.css"
 
 import { PLAIN_URL } from "@/config/constants"
 import { SITE_CONFIG } from "@/config/site"
+import CursorTrail from "@/components/cursor-trail"
 import OnlineStatus from "@/components/online-status"
 import SiteNav from "@/components/site-nav"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
@@ -115,6 +116,7 @@ export default function RootLayout({
           <TailwindIndicator />
           <Toaster />
           <OnlineStatus />
+          <CursorTrail />
         </ThemeProvider>
       </body>
     </html>
