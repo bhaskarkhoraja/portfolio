@@ -42,13 +42,7 @@ module.exports = {
   ignorePatterns: ["node_modules/", "dist/"],
   rules: {
     "import/no-default-export": "off",
-    "import/order": [
-      "error",
-      {
-        "newlines-between": "always",
-      },
-    ],
-
+    "import/order": "off",
     "import/no-unresolved": ["error", { ignore: ["^geist/.*"] }],
     "react/function-component-definition": "off",
     "@typescript-eslint/consistent-type-definitions": ["error", "type"],
