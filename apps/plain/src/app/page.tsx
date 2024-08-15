@@ -1,3 +1,5 @@
+import Technology from "@/components/technology"
+
 export default function Home(): JSX.Element {
   const date = new Date()
   const weekdayNames = [
@@ -36,6 +38,13 @@ export default function Home(): JSX.Element {
           user-friendly web applications. His commitment to best practices
           ensures maintainable and scalable solutions.
         </h1>
+      </section>
+
+      <section className="mt-6 space-y-6">
+        <h2 className="text-lg font-bold text-foreground/80">
+          Technologies I excel at and use right now.
+        </h2>
+        <Technology />
       </section>
     </main>
   )
