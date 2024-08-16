@@ -34,9 +34,7 @@ export default function Home(): JSX.Element {
           Hope Your {greeting} Is Going Well!
         </h3>
         <h1 className="text-3xl font-bold">
-          Bhaskar is a Next.js developer who creates clean, stunning, and
-          user-friendly web applications. His commitment to best practices
-          ensures maintainable and scalable solutions.
+          Bhaskar, a Next.js developer, creates stunning, user-friendly web applications with a focus on maintainability and scalability.
         </h1>
       </section>
 
