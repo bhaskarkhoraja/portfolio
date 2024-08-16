@@ -72,9 +72,9 @@ const Technology = (): JSX.Element => {
   ] as const
 
   return (
-    <div className="flex w-full flex-col lg:flex-row-reverse">
+    <div className="flex w-full flex-col md:flex-row-reverse">
       <div
-        className="relative ml-0 h-96 w-full lg:ml-8"
+        className="relative ml-0 h-96 w-full md:ml-8"
         ref={containerRef}
       >
         <div className="absolute bottom-0 left-0">
@@ -94,7 +94,7 @@ const Technology = (): JSX.Element => {
           </DegreeProvider>
         </div>
       </div>
-      <div className="mt-2 flex h-16 flex-row gap-4 rounded-lg border p-4 lg:h-96 lg:w-16 lg:flex-col-reverse">
+      <div className="mt-2 flex h-16 flex-row gap-4 rounded-lg border p-4 md:h-96 md:w-16 md:flex-col-reverse">
         {technologyData.map((tech) => (
           <TechnologyCartridge
             delay={tech.id * SVG_DELAY_SHOT}

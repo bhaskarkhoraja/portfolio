@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
           It&apos;s {weekdayNames[date.getDay()]}, <br />
           Hope Your {greeting} Is Going Well!
         </h3>
-        <h1 className="text-center text-2xl font-bold lg:text-start lg:text-3xl">
+        <h1 className="text-center text-2xl font-bold md:text-start md:text-3xl">
           Bhaskar is a Next.js developer who turns ideas into reality. With a
           passion for innovation, he crafts seamless web experiences.
         </h1>
