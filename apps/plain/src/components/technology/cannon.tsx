@@ -78,15 +78,13 @@ const Cannon = ({ noOfTech }: { noOfTech: number }): JSX.Element => {
         {/* Cannon base holder */}
         <g>
           <path
+            className="fill-foreground stroke-background"
             d="M49.0493 49.3876L41.3049 36.4558C39.752 33.8627 35.9945 33.8627 34.4416 36.4558L26.6972 49.3876C25.1005 52.0537 27.0212 55.4427 30.1289 55.4427H45.6176C48.7253 55.4427 50.646 52.0537 49.0493 49.3876Z"
-            fill="black"
-            stroke="white"
             strokeWidth="2"
           />
           <path
+            className="fill-foreground stroke-background"
             d="M39.6408 42.987C39.6408 43.9815 38.8445 44.7786 37.8734 44.7786C36.9023 44.7786 36.106 43.9815 36.106 42.987C36.106 41.9924 36.9023 41.1953 37.8734 41.1953C38.8445 41.1953 39.6408 41.9924 39.6408 42.987Z"
-            fill="black"
-            stroke="white"
           />
         </g>
       </g>
