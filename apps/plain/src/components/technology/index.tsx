@@ -72,17 +72,7 @@ const Technology = (): JSX.Element => {
   ] as const
 
   return (
-    <div className="flex w-full flex-col-reverse lg:flex-row">
-      <div className="mt-2 flex h-16 flex-row gap-4 rounded-lg border p-4 lg:h-96 lg:w-16 lg:flex-col-reverse">
-        {technologyData.map((tech) => (
-          <TechnologyCartridge
-            delay={tech.id * SVG_DELAY_SHOT}
-            key={tech.id}
-          >
-            {tech.icon}
-          </TechnologyCartridge>
-        ))}
-      </div>
+    <div className="flex w-full flex-col lg:flex-row-reverse">
       <div
         className="relative h-96 w-full"
         ref={containerRef}
@@ -103,6 +93,16 @@ const Technology = (): JSX.Element => {
               ))}
           </DegreeProvider>
         </div>
+      </div>
+      <div className="mt-2 flex h-16 flex-row gap-4 rounded-lg border p-4 lg:h-96 lg:w-16 lg:flex-col-reverse">
+        {technologyData.map((tech) => (
+          <TechnologyCartridge
+            delay={tech.id * SVG_DELAY_SHOT}
+            key={tech.id}
+          >
+            {tech.icon}
+          </TechnologyCartridge>
+        ))}
       </div>
     </div>
   )
