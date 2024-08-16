@@ -188,7 +188,7 @@ const CursorTrail = (): JSX.Element => {
   ] as const
 
   return (
-    <>
+    <div className="hidden md:block">
       {/* Multiple circles for trailing efects */}
       {Array.from({ length: 20 }, (_, index) => index + 1).map(
         (number, index) => (
@@ -224,7 +224,7 @@ const CursorTrail = (): JSX.Element => {
           </div>
         )
       )}
-    </>
+    </div>
   )
 }
 
