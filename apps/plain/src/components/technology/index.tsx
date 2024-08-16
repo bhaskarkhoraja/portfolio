@@ -74,7 +74,7 @@ const Technology = (): JSX.Element => {
   return (
     <div className="flex w-full flex-col lg:flex-row-reverse">
       <div
-        className="relative h-96 w-full"
+        className="relative ml-0 h-96 w-full lg:ml-8"
         ref={containerRef}
       >
         <div className="absolute bottom-0 left-0">

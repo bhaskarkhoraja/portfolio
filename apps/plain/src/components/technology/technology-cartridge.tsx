@@ -19,14 +19,14 @@ const TechnologyCartridge = ({
       {size.width !== 0 && (
         <motion.div
           animate={{
-            x: SVG_SIZE + size.width > 1024 ? 63 : 0,
-            y: size.width > 1024 ? 8 : -54,
+            x: SVG_SIZE + size.width > 1024 ? 95 : 0,
+            y: size.width > 1024 ? 5 : -54,
             scale: 0.4,
             display: "block",
             transitionEnd: { display: "none" },
           }}
           initial={{ scale: 1.2 }}
-          transition={{ delay: delay - 0.5 }}
+          transition={{ delay: delay - 0.5, type: "tween" }}
         >
           {children}
         </motion.div>
