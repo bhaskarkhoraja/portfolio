@@ -63,6 +63,10 @@ const Technology = (): JSX.Element => {
     },
     {
       id: 6,
+      icon: <Icons.PostgreSQL />,
+    },
+    {
+      id: 7,
       icon: <Icons.FramerMotionSquared />,
     },
   ] as const
