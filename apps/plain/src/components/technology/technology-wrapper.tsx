@@ -115,6 +115,11 @@ const TechnologyWrapper = ({
       } else {
         y = "*"
       }
+
+      // sometimes we get x = 0 and y = (height-SVG_SIZE) which is not an edge so we need to tackle it
+      if (x === "0" && y === "(height-SVG_SIZE)") {
+        x = "*"
+      }
     }
 
     const key = `${x},${y}`
