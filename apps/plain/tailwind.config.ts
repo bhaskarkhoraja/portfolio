@@ -12,7 +12,7 @@ const config: Config = {
       container: () => {
         return {
           center: true,
-          padding: "0rem",
+          padding: "0.5rem",
           screens: {
             "2xl": { min: "1400px" },
           },
