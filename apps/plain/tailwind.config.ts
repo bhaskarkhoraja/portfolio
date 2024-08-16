@@ -9,6 +9,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: () => {
+        return {
+          center: true,
+          padding: "0rem",
+          screens: {
+            "2xl": { min: "1400px" },
+          },
+        }
+      },
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...defaultTheme.fontFamily.sans],
         serif: ["var(--font-agbalumo-serif)", ...defaultTheme.fontFamily.serif],

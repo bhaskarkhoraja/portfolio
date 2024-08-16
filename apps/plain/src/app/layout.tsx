@@ -109,7 +109,7 @@ export default function RootLayout({
           disableTransitionOnChange
           enableSystem
         >
-          <div className="flex">
+          <div className="container flex">
             <SiteNav />
             {children}
           </div>

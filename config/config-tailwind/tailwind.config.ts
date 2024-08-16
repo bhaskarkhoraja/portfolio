@@ -6,15 +6,6 @@ const config: Omit<Config, "content"> = {
   darkMode: ["class"],
   theme: {
     extend: {
-      container: () => {
-        return {
-          center: true,
-          padding: "2rem",
-          screens: {
-            "2xl": "1400px",
-          },
-        }
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
