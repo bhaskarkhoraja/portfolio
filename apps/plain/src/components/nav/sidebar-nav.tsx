@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 
 const SideBarNav = (): JSX.Element => {
   return (
-    <aside className="h-screen pt-10">
+    <aside className="hidden h-screen pt-10 lg:block">
       <div className="px-4">
         <Name />
       </div>
