@@ -2,6 +2,7 @@
 
 import { toast } from "sonner"
 
+import { SITE_CONFIG } from "@/config/site"
 import { Button } from "@/components/ui/button"
 
 const Name = (): JSX.Element => {
@@ -16,10 +17,10 @@ const Name = (): JSX.Element => {
 
   return (
     <Button
-      className="bg-tertiary py-6 text-tertiary-foreground shadow-none hover:bg-tertiary hover:text-tertiary-foreground"
+      className="bg-transparent px-0 py-6 text-foreground shadow-none hover:bg-transparent hover:text-foreground md:bg-tertiary md:px-4 md:text-tertiary-foreground md:hover:bg-tertiary md:hover:text-tertiary-foreground"
       onClick={handleClick}
     >
-      <span className="pb-1 font-serif text-xl">Bhaskar Khoraja</span>
+      <span className="pb-1 font-serif text-xl">{SITE_CONFIG.name}</span>
     </Button>
   )
 }
