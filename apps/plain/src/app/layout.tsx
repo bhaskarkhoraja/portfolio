@@ -8,8 +8,8 @@ import "@/styles/globals.css"
 import { PLAIN_URL } from "@/config/constants"
 import { SITE_CONFIG } from "@/config/site"
 import CursorTrail from "@/components/cursor-trail"
+import NavBar from "@/components/nav/navbar"
 import OnlineStatus from "@/components/online-status"
-import SiteNav from "@/components/site-nav"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { Toaster } from "@/components/ui/sonner"
 import { cn } from "@/lib/utils"
@@ -109,8 +109,8 @@ export default function RootLayout({
           disableTransitionOnChange
           enableSystem
         >
-          <div className="container flex">
-            <SiteNav />
+          <div className="container md:flex">
+            <NavBar />
             {children}
           </div>
           <TailwindIndicator />

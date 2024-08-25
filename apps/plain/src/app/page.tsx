@@ -1,4 +1,5 @@
 import Technology from "@/components/technology"
+import { cn } from "@/lib/utils"
 
 export default function Home(): JSX.Element {
   const date = new Date()
@@ -27,7 +28,7 @@ export default function Home(): JSX.Element {
   }
 
   return (
-    <main className="container pt-10">
+    <main className={cn("container", "md:h-dvh md:overflow-y-auto md:pt-10")}>
       <section className="space-y-6">
         <h3 className="text-lg font-bold text-foreground/80">
           It&apos;s {weekdayNames[date.getDay()]}, <br />
