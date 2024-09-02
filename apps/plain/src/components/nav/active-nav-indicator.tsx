@@ -11,7 +11,7 @@ const ActiveNavIndicator = ({ link }: { link: string }): JSX.Element | null => {
   return link === pathname ? (
     <motion.div
       className={cn(
-        "absolute left-1 top-1.5 flex h-6 w-2 items-center justify-center rounded-sm bg-foreground"
+        "absolute left-1 flex h-6 w-2 items-center justify-center rounded-sm bg-foreground"
       )}
       layoutId="active-nav"
     />
